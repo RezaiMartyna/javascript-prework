@@ -29,46 +29,45 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = getMoveName(randomNumber);
+let argComputerMove = getMoveName(randomNumber);
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Mój ruch to: ' + argComputerMove);
 
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName(randomNumber);
+let argPlayerMove = getMoveName(randomNumber);
 
 
-printMessage('Twój ruch to: ' + playerMove);
+printMessage('Twój ruch to: ' + argPlayerMove);
 
 function displayResult(argComputerMove, argPlayerMove){
-	console.log('moves:', argComputerMove, argPlayerMove);
 	if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-	  return('Ty wygrywasz!');
+	  return 'Ty wygrywasz!';
 	} else if ( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-		return('Komputer wygrywa');
+		return 'Komputer wygrywa';
 	} else if ( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-		return('Remis');
+		return 'Remis';
 	} else if ( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-		return('Komputer wygrywa');
+		return 'Komputer wygrywa';
 	} else if ( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-		return('Ty wygrywasz!');
+		return 'Ty wygrywasz!';
 	} else if ( argComputerMove == 'papier' && argPlayerMove == 'papier'){
-		return('Remis');
+		return 'Remis';
 	} else if ( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-		return('Ty wygrywasz');
+		return 'Ty wygrywasz';
 	} else if ( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-		return ('Komputer wygrywa');
+		return 'Komputer wygrywa';
 	} else if ( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
-		return ('Remis');
+		return 'Remis';
 	} else if ( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
-		return ( 'Wybrałeś złą liczbę wybierz 1,2 lub 3'); 
+		return 'Wybrałeś złą liczbę wybierz 1,2 lub 3'; 
 	} else if ( argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
-		return ( 'Wybrałeś złą liczbę wybierz 1,2 lub 3'); 
+		return 'Wybrałeś złą liczbę wybierz 1,2 lub 3'; 
 	} else if ( argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
-	  return ( 'Wybrałeś złą liczbę wybierz 1,2 lub 3'); 
+	  return 'Wybrałeś złą liczbę wybierz 1,2 lub 3'; 
   }
 }
 
