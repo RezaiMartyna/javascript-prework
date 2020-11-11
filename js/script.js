@@ -13,8 +13,8 @@ function playGame(playerInput){
 	}
 
 	function getMoveName(argMoveId){
-		if(argMoveId == 1){
-	  	return 'kamień';
+		  if(argMoveId == 1){
+	  	    return 'kamień';
 		} if(argMoveId == 2){
 			return 'papier';
 		} if(argMoveId == 3){
@@ -27,11 +27,9 @@ function playGame(playerInput){
 	randomNumber = Math.floor(Math.random() * 3 + 1);
 
 	argComputerMove = getMoveName(randomNumber);
-
 	printMessage('Mój ruch to: ' + argComputerMove);
 
 	argPlayerMove = getMoveName(playerInput);
-
 	printMessage('Twój ruch to: ' + argPlayerMove);
 
 	function displayResult(argComputerMove, argPlayerMove){
@@ -62,11 +60,8 @@ function playGame(playerInput){
   		}
 	}
 
-	let result = displayResult(argComputerMove, argPlayerMove);
-
+	result = displayResult(argComputerMove, argPlayerMove);
 	printMessage('Wynik: ' + result);
-	
-
 }
 	
 document.getElementById('play-rock').addEventListener('click', function(){
